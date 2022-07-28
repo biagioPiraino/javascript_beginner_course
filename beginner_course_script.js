@@ -161,3 +161,22 @@ console.log(bycycle.gear);
 car.setGear(5);
 console.log(car.gear);
 /* ------------------------------------------------------------ */
+
+/* ---------------- Class ------------------------------------- */
+class SpaceShuttle {
+  constructor(targetPlanet){
+    this.targetPlanet = targetPlanet;
+  }
+  SetTargetPlanet(newTargetPlanet) {
+    "use strict";
+    this.targetPlanet = newTargetPlanet;
+  }
+  GetTargetPlanet() {return this.targetPlanet};
+}
+
+var zeus = new SpaceShuttle("Jupiter");
+console.log(zeus.GetTargetPlanet());
+
+zeus.SetTargetPlanet("Earth");
+console.log(zeus.GetTargetPlanet());
+/* ------------------------------------------------------------ */
