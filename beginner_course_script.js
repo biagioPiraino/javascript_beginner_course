@@ -165,18 +165,18 @@ console.log(car.gear);
 /* ---------------- Class ------------------------------------- */
 class SpaceShuttle {
   constructor(targetPlanet){
-    this.targetPlanet = targetPlanet;
+    this._targetPlanet = targetPlanet;
   }
-  SetTargetPlanet(newTargetPlanet) {
+  set TargetPlanet(newTargetPlanet) {
     "use strict";
-    this.targetPlanet = newTargetPlanet;
+    this._targetPlanet = newTargetPlanet;
   }
-  GetTargetPlanet() {return this.targetPlanet};
+  get TargetPlanet() {return this._targetPlanet};
 }
 
 var zeus = new SpaceShuttle("Jupiter");
-console.log(zeus.GetTargetPlanet());
+console.log(zeus.TargetPlanet);
 
-zeus.SetTargetPlanet("Earth");
-console.log(zeus.GetTargetPlanet());
+zeus.TargetPlanet = "Earth";
+console.log(zeus.TargetPlanet);
 /* ------------------------------------------------------------ */
